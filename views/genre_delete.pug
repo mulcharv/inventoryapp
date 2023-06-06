@@ -1,0 +1,26 @@
+extends layout 
+
+block content 
+    h1 #{title}: #{genre.name} 
+
+    if genre_records.length 
+
+        p #[strong Delete the following records before attempting to delete this genre.] 
+
+        div(style='margin-left:2vw; margin-top:2vw')
+
+            h4 Records 
+
+            each record in genre_records 
+                a(href=record.url) #{record.title} 
+                | #{record.release_date_formatted} 
+
+    else 
+        p Do you really want to delete this genre? 
+
+        form(method='POST' action='') 
+            div.form-group 
+                input#genreid.form-control(type='hidden', name='genreid', required='true', value=genre._id)
+            button.btn.btn-primary(type='submit') Delete 
+
+    

@@ -1,0 +1,22 @@
+doctype html
+html(lang="en")
+  head
+    title= title
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    div(class='header-container')
+      div(class='home-button') 
+        a(class='homenavtext' href='/catalog') LONDON RECORDS
+      div(class='navigation-container')
+        ul(class='navigation-links')
+          li 
+            a(class='morenavlink' href='/catalog/records') Records 
+          li 
+            a(class='morenavlink' href='/catalog/genres') Genres 
+          li 
+            a(class='morenavlink' href='/catalog/artists') Artists 
+    
+    div(class='page-content')
+      block content

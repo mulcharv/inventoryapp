@@ -1,0 +1,166 @@
+@font-face {
+  font-family: Raleway;
+  src: url('../fonts/raleway.ttf') format('ttf');
+  font-style: normal;
+  font-weight: 300 800;
+}
+
+html {
+  font-family: Raleway, Helvetica;
+}
+
+.header-container {
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: space-between;
+}
+
+.navigation-links {
+  display: grid;
+  grid-auto-flow: column;
+  margin: 0;
+  justify-content: center;
+  gap: 5vw;
+}
+
+.navigation-links li {
+  display: inline;
+}
+
+
+a {
+  color: #1DB954;
+  text-decoration: none;
+}
+
+.home-first {
+  display: grid;
+  grid-auto-flow: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5vw;
+}
+
+.homenavtext {
+  font-size: 4vh;
+}
+
+.recordimg {
+  width: 24vw;
+  height: 24vw;
+}
+
+.home-title {
+  display: grid;
+  gap: 2vh;
+}
+
+.title-line {
+  font-size: 5vh;
+}
+
+.title-blurb {
+  font-size: 2.5vh;
+}
+
+.data-section {
+  display: grid;
+  justify-content: center;
+}
+
+.data-blurb {
+  font-size: 2.5vh;
+}
+
+.data-records li {
+  font-size: 2.3vh;
+}
+
+.home-links-section {
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: center;
+  gap: 4vw;
+}
+
+.home-links-section li {
+  display: inline;
+}
+
+.homeaddlink {
+  font-size: 2.5vh;
+}
+
+.recordlistcont {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(auto-fill, 25vw);
+  justify-items: center;
+  row-gap: 2vh;
+}
+
+
+
+.recordlistimg {
+  width: 20vw;
+  height: 20vw;
+}
+
+.genredetailtitle {
+  font-size: 4vh;
+}
+
+.recordgendettitle, .recordgendetartist {
+  font-size: 2.5vh;
+}
+
+.recorddetailimg {
+  width: 25vw;
+  height: 25vw;
+  margin-bottom: 2vh;
+}
+
+.recorddetailcont {
+  margin-top: 3vh;
+  margin-left: 6vh;
+}
+
+.recorddetailtitle {
+  font-size: 3vh;
+  margin-bottom: 2vh;
+}
+
+.recorddetailsummary {
+  width: 40vw;
+}
+
+.recorddetailinfo {
+  margin-bottom: 1.5vh;
+}
+
+.artistdetailcont {
+  margin-top: 3vh;
+  margin-left: 3vh;
+}
+
+.artistdetailtitle {
+  font-size: 3vh;
+  margin-top: 3vh;
+  margin-bottom: 2vh;
+}
+
+.artistdetailyears {
+  font-size: 2.5vh;
+  margin-bottom: 4vh;
+}
+
+.artistdetailrecords {
+  font-size: 2.5vh;
+  margin-bottom: 2vh;
+}
+
+.artistdetailimg {
+  width: 25vw;
+  height: 25vw;
+}
+

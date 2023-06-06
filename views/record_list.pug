@@ -1,0 +1,17 @@
+extends layout 
+
+block content 
+    h1(class='recordlisttitle')= title 
+
+    div(class='recordlistcont')
+        each record in record_list 
+            div(class='recordlistitem')
+                div(class='recordlistimgcont')
+                    img(class='recordlistimg' src= record.cover_image alt='')
+                div(class='recordlisttitle') 
+                    a(href=record.url) #{record.title} 
+                div(class='recordlistartist') #{record.artist.name}
+
+        else 
+            div There are no records.
+

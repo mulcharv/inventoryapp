@@ -1,0 +1,37 @@
+extends layout 
+
+block content 
+    div(class='recorddetailcont')
+        div(class='recorddetailtitle') #{record.title} 
+        div(class='recorddetailimgcont') 
+            img(class='recorddetailimg' src=record.cover_image alt='')
+        div(class='recorddetailinfo') #[strong Artist:] 
+             a(href=record.artist.url) #{record.artist.name} 
+        div(class='recorddetailinfo recorddetailsummary') #[strong Summary:] #{record.summary} 
+        div(class='recorddetailinfo') #[strong Release Date:] #{record.release_date_formatted} 
+        div(class='recorddetailinfo') #[strong Genres:] 
+            each val, index in record.genre 
+                a(href=val.url)  #{val.name} 
+                if index < record.genre.length - 1
+                  |,
+
+        div(class='recorddetailinfo') #[strong Label:] #{record.label} 
+        div(class='recorddetailinfo') #[strong Length:] #{record.length_formatted} 
+        div(class='recorddetailinfo') #[strong Number in Stock:] #{record.number_in_stock} 
+        div(class='recorddetailinfo') #[strong Price:] £#{record.price} 
+
+    hr 
+    p 
+        a(href=record.url+'/delete') Delete Record
+    p 
+        a(href=record.url+'/update') Update Record 
+
+    
+
+ 
+
+
+
+
+
+

@@ -1,0 +1,30 @@
+extends layout 
+
+block content 
+
+    div(class="artistdetailcont")
+
+        div(class="artistdetailtitle") #{artist.name} 
+        div(class="artistdetailyears") Years Active: #{artist.years_active} 
+
+        div(class='artistdetailrecords') Records
+
+        div(class='artistdetaillist') 
+            each record in artist_records
+                div(class='artistdetailitem')  
+                    div 
+                        img(class='artistdetailimg' src=record.cover_image alt='')
+                    div 
+                        a(href=record.url) #{record.title}
+                    div #{record.release_date_formatted}  
+            
+            else 
+                div This artist has no records in the inventory.
+
+        hr 
+        p  
+            a(href=artist.url+'/delete') Delete artist
+        p 
+            a(href=artist.url+'/update') Update artist
+
+    

@@ -1,0 +1,13 @@
+extends layout 
+
+block content 
+    h1(class='artistlisttitle')= title 
+
+    ul 
+        each artist in artist_list 
+            li 
+                a(href=artist.url) #{artist.name}
+                |   (#{artist.years_active})
+        
+        else 
+            li There are no artists.

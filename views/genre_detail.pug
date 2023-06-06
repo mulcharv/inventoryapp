@@ -1,0 +1,26 @@
+extends layout 
+
+block content 
+
+    h2 Genre: #{genre.name} 
+
+    div(style='margin-left:20px;margin-top:20px')
+
+        div(class='genredetailtitle') Records 
+
+            each record in genre_records 
+                div(class='recordlistitem')
+                    div(class='recordlistimgcont')
+                        img(class='recordlistimg' src= record.cover_image alt='')
+                    div(class='recordgendettitle') 
+                        a(href=record.url) #{record.title} 
+                    div(class='recordgendetartist') #{record.artist.name}
+
+            else 
+                p This genre has no records
+        
+    hr 
+    p 
+        a(href=genre.url+'/delete') Delete genre
+    p 
+        a(href=genre.url+'/update') Update genre

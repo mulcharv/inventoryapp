@@ -1,0 +1,27 @@
+extends layout
+
+block content
+  div(class='home-first')
+    div(class='home-img')
+      img(class='recordimg' src='/images/Vinyl_record.svg')
+    div(class='home-title')
+      div(class='title-line')=title
+      div(class='title-blurb') The #[em premium] purveyor of modern vinyl records, based in Rotherhithe, operating since 2003.
+  
+  div(class='data-section')
+    div(class='data-blurb') Dynamic data overview of the inventory:
+
+    ul(class='data-records')
+      li #[strong Records:] !{record_count}
+      li #[strong Genres:] !{genre_count}
+      li #[strong Artists:] !{artist_count}
+
+  div(class='home-links-cont')
+    ul(class='home-links-section') 
+      li 
+        a(class='homeaddlink' href='/catalog/record/create') Add Record 
+      li 
+        a(class='homeaddlink' href='/catalog/genre/create') Add Genre 
+      li 
+        a(class='homeaddlink' href='/catalog/artist/create') Add Artist 
+    
