@@ -22,7 +22,9 @@ const limiter = RateLimit({
 const mongoose = require("mongoose");
 const { mainModule } = require('process');
 mongoose.set("strictQuery", false);
-const mongoDB = "mongodb+srv://mulcharv:IKTou5nBmkuHGADB@cluster0.pgfbmbd.mongodb.net/inventoryapp?retryWrites=true&w=majority";
+
+const dev_db_url = "mongodb+srv://mulcharv:IKTou5nBmkuHGADB@cluster0.pgfbmbd.mongodb.net/inventoryapp?retryWrites=true&w=majority";
+const mongoDB = process.env.MONGODB_URI || dev_db_url;
 
 main().catch((err) => console.log(err));
 async function main() {
@@ -39,6 +41,7 @@ app.use(
   helmet.contentSecurityPolicy({
     directives: {
       'script-src': ["'self'", "code.jquery.com", "cdn.jsdelivr.net"],
+      "img-src": ["'self'", "https: data:"]
     },
   })
 );
